@@ -16,7 +16,7 @@ New
 
 Input OVR
     Wait Until Page Contains Element        xpath=//input[@title='Official Violation Receipt (OVR) Number']
-    Sleep                                   5s
+    Click Element                           xpath=//input[@title='Official Violation Receipt (OVR) Number']
     Input Text                              xpath=//input[@title='Official Violation Receipt (OVR) Number']     OR-1234512
     Click Element                           xpath=//button[normalize-space()='Next']
 

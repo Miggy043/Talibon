@@ -11,5 +11,4 @@ Verify Functionality of Start New Transaction
     Login Happy
     New
     Input OVR
-    Review
     Close Browser

@@ -13,5 +13,5 @@ Visit E-News
     Click Element                           xpath=//span[@class='flex hidden md:block'][normalize-space()='Visit E-Talibon News']
     Wait Until Page Contains                WHAT YOU MIGHT BE MISSING
     Click Element                           xpath=//a[@class='border-r border-primary-base py-1 px-8 hover:font-medium']
-    Click Element                           xpath=//div[@class='relative block col-span-4 row-span-2 h-64 sm:col-span-2 sm:h-full']//a[@class='img-news-card block w-full bg-cover bg-center bg-no-repeat']
-    Click Element                           xpath=//a[@class='border-r border-primary-base px-8 py-1 hover:font-medium'][normalize-space()='Latest News']
+    Wait Until Page Contains                TRENDING
+    Click Element                           xpath=//*[@id="news-homepage"]/main/div[2]/div/div/div[1]/div/div/div/div/div[1]/a
