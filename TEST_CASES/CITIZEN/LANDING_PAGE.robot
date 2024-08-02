@@ -21,5 +21,6 @@ Verify Login Page
 Verify E News Page
     Open Browser                            ${url}      ${browser}
     E News
+    Close Browser
 
     
