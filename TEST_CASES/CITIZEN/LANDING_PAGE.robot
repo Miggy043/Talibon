@@ -1,24 +1,23 @@
 *** Settings ***
 Resource  ${CURDIR}${/}../${/}..//RESOURCES${/}COMMON.robot
 
-*** Variables ***
-${browser}  google chrome
-${url}      https://talibon-citizen-stg.multisyscorp.io/ovrs
-
 *** Test Cases ***
 Verify Landing Page    
-    [Tags]                                  Test
+    [Tags]                                  page
     Open Browser                            ${url}      ${browser}
 
 Verify Register Page
+    [Tags]                                  register
     Open Browser                            ${url}      ${browser}
     Register Page
 
 Verify Login Page
+    [Tags]                                  login
     Open Browser                            ${url}      ${browser}
     Login Page
 
 Verify E News Page
+    [Tags]                                  news
     Open Browser                            ${url}      ${browser}
     E News
     Close Browser

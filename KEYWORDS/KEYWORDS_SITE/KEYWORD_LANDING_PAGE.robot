@@ -1,14 +1,13 @@
 *** Keywords ****
 Register Page
     Wait Until Page Contains        Settle your OVR transactions in 5 steps:
-    Wait Until Element Contains     Register
-    Click Element                   xpath=/html/body/div[2]/main/div[1]/div/nav/ul/li[3]/div/button[1]
+    Click Element                   xpath=//*[normalize-space()='Register']
     Wait Until Page Contains        Register
     Sleep                           3s
 
 Login Page
-    Wait Until Element Is Visible           xpath=//button[normalize-space()='Login']
-    Click Element                           xpath=/html/body/div[2]/main/div[1]/div/nav/ul/li[3]/div/button[2]
+    Page Should Contain                     Settle your OVR transactions in 5 steps:
+    Click Element                           xpath=//*[normalize-space()='Login']
     Wait Until Page Contains                Login
     Sleep                                   3s
     

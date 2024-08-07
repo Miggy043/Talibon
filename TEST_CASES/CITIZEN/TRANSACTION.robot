@@ -1,9 +1,7 @@
 *** Settings ***
 Resource  ${CURDIR}${/}../${/}..//RESOURCES${/}COMMON.robot
 
-*** Variables ***
-${browser}  google chrome
-${url}      https://talibon-citizen-stg.multisyscorp.io/ovrs
+Documentation       Perform an end to end transaction
 
 *** Test Cases ***
 Verify Functionality of Start New Transaction

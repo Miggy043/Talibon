@@ -8,3 +8,8 @@ Resource  ${CURDIR}${/}..//KEYWORDS${/}KEYWORDS_SITE${/}KEYWORD_E_NEWS.robot
 
 #CORE
 Resource  ${CURDIR}${/}..//KEYWORDS${/}KEYWORDS_ADMIN${/}KEYWORD_ADMIN_LOGIN_PAGE.robot
+
+
+*** Variables ***
+${browser}  google chrome
+${url}      https://talibon-citizen-stg.multisyscorp.io/ovrs

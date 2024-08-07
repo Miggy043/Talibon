@@ -1,10 +1,6 @@
 *** Settings ***
 Resource  ${CURDIR}${/}../${/}..//RESOURCES${/}COMMON.robot
 
-*** Variables ***
-${browser}  google chrome
-${url}      https://talibon-citizen-stg.multisyscorp.io/ovrs
-
 *** Test Cases ***
 Verify Successful Login                                  
     Open Browser                            ${url}        ${browser}                                                ${browser}

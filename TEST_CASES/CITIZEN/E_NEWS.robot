@@ -1,13 +1,19 @@
 *** Settings ***
 Resource  ${CURDIR}${/}../${/}..//RESOURCES${/}COMMON.robot
 
-*** Variables ***
-${browser}  google chrome
-${url}      https://talibon-citizen-stg.multisyscorp.io/ovrs
-
 *** Test Cases ***
 Verify Functionality of E-News
     Open Browser                            ${url}        ${browser}
-    Login Start
     Visit E-News
+    Close Browser
+
+Verify About Us
+    Open Browser                            ${url}        ${browser}
+    About Us
+    Close Browser
+
+Verify Contact Us
+    Open Browser                            ${url}        ${browser}
+    Contact Us
+    Close Browser
 
