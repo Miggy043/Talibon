@@ -1,54 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0rc1 (Python 3.9.1 on darwin)" generated="20240807 11:04:06.690" rpa="false">
-<suite id="s1" name="LANDING PAGE" source="/Users/francismiguelramos/automation/python/Talibon/TEST_CASES/CITIZEN/LANDING_PAGE.robot">
-<test id="s1-t1" name="Verify Login Page">
+<robot generator="Robot 4.0rc1 (Python 3.9.1 on darwin)" generated="20240808 13:59:33.185" rpa="false">
+<suite id="s1" name="REGISTER" source="/Users/francismiguelramos/automation/python/Talibon/TEST_CASES/CITIZEN/REGISTER.roboT">
+<test id="s1-t1" name="Verify Get Started Functionality">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240807 11:04:06.910" level="INFO">Opening browser 'google chrome' to base url 'https://talibon-citizen-stg.multisyscorp.io/ovrs'.</msg>
-<status status="PASS" starttime="20240807 11:04:06.909" endtime="20240807 11:04:10.220"/>
+<msg timestamp="20240808 13:59:33.495" level="INFO">Opening browser 'google chrome' to base url 'https://talibon-citizen-stg.multisyscorp.io/ovrs'.</msg>
+<status status="PASS" starttime="20240808 13:59:33.494" endtime="20240808 13:59:36.613"/>
 </kw>
-<kw name="Login Page" library="KEYWORD_LANDING_PAGE">
+<kw name="Registration" library="KEYWORD_REGISTER">
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Settle your OVR transactions in 5 steps:</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20240807 11:04:10.399" level="INFO">Current page contains text 'Settle your OVR transactions in 5 steps:'.</msg>
-<status status="PASS" starttime="20240807 11:04:10.223" endtime="20240807 11:04:10.399"/>
+<msg timestamp="20240808 13:59:36.689" level="INFO">Current page contains text 'Settle your OVR transactions in 5 steps:'.</msg>
+<status status="PASS" starttime="20240808 13:59:36.616" endtime="20240808 13:59:36.689"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[normalize-space()='Login']</arg>
+<arg>xpath=//button[normalize-space()='Register']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240807 11:04:10.414" level="INFO">Clicking element 'xpath=//*[normalize-space()='Login']'.</msg>
-<status status="PASS" starttime="20240807 11:04:10.412" endtime="20240807 11:04:10.895"/>
+<msg timestamp="20240808 13:59:36.690" level="INFO">Clicking element 'xpath=//button[normalize-space()='Register']'.</msg>
+<status status="PASS" starttime="20240808 13:59:36.689" endtime="20240808 13:59:37.657"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='+63']</arg>
+<arg>9498510239</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240808 13:59:37.658" level="INFO">Typing text '9498510239' into text field 'xpath=//input[@placeholder='+63']'.</msg>
+<status status="PASS" starttime="20240808 13:59:37.657" endtime="20240808 13:59:38.204"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@title='Set Account PIN']</arg>
+<arg>111111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240808 13:59:38.204" level="INFO">Typing text '111111' into text field 'xpath=//input[@title='Set Account PIN']'.</msg>
+<status status="PASS" starttime="20240808 13:59:38.204" endtime="20240808 13:59:38.344"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@title='Retype Account PIN']</arg>
+<arg>111111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240808 13:59:38.345" level="INFO">Typing text '111111' into text field 'xpath=//input[@title='Retype Account PIN']'.</msg>
+<status status="PASS" starttime="20240808 13:59:38.345" endtime="20240808 13:59:38.521"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//button[@type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240808 13:59:38.523" level="INFO">Clicking element 'xpath=//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20240808 13:59:38.522" endtime="20240808 13:59:38.702"/>
 </kw>
 <kw name="Wait Until Page Contains" library="SeleniumLibrary">
-<arg>Login</arg>
+<arg>OTP</arg>
 <doc>Waits until ``text`` appears on the current page.</doc>
-<status status="PASS" starttime="20240807 11:04:10.895" endtime="20240807 11:04:10.983"/>
+<status status="PASS" starttime="20240808 13:59:38.702" endtime="20240808 13:59:38.752"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>3s</arg>
+<arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240807 11:04:13.986" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20240807 11:04:10.983" endtime="20240807 11:04:13.986"/>
+<msg timestamp="20240808 13:59:43.753" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240808 13:59:38.753" endtime="20240808 13:59:43.754"/>
 </kw>
-<status status="PASS" starttime="20240807 11:04:10.221" endtime="20240807 11:04:13.987"/>
+<status status="PASS" starttime="20240808 13:59:36.615" endtime="20240808 13:59:43.754"/>
 </kw>
-<tag>login</tag>
-<status status="PASS" starttime="20240807 11:04:06.908" endtime="20240807 11:04:13.987"/>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240808 13:59:43.755" endtime="20240808 13:59:44.070"/>
+</kw>
+<status status="PASS" starttime="20240808 13:59:33.493" endtime="20240808 13:59:44.070"/>
 </test>
-<status status="PASS" starttime="20240807 11:04:06.692" endtime="20240807 11:04:13.989"/>
+<status status="PASS" starttime="20240808 13:59:33.187" endtime="20240808 13:59:44.072"/>
 </suite>
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">login</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="LANDING PAGE">LANDING PAGE</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="REGISTER">REGISTER</stat>
 </suite>
 </statistics>
 <errors>

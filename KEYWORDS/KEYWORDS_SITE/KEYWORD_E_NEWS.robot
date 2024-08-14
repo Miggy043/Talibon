@@ -1,5 +1,7 @@
 *** Keywords ***
 Visit E-News
+    Maximize Browser Window
+    Set Selenium Speed                      2 seconds
     Wait Until Page Contains                Visit E-Talibon News
     Click Element                           xpath=//span[@class='flex hidden md:block'][normalize-space()='Visit E-Talibon News']
     Page Should Contain                     WHAT YOU MIGHT BE MISSING

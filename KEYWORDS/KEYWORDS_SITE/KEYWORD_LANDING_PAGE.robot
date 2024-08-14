@@ -1,4 +1,12 @@
 *** Keywords ****
+
+Launch Browser
+    [Arguments]                     ${appurl}   ${appbrowser}
+    Open Browser                    ${appurl}   ${appbrowser}
+    Maximize Browser Window
+    ${title}=                       get title
+    [Return]                        ${title}
+
 Register Page
     Wait Until Page Contains        Settle your OVR transactions in 5 steps:
     Click Element                   xpath=//*[normalize-space()='Register']

@@ -4,7 +4,9 @@ Resource  ${CURDIR}${/}../${/}..//RESOURCES${/}COMMON.robot
 *** Test Cases ***
 Verify Landing Page    
     [Tags]                                  page
-    Open Browser                            ${url}      ${browser}
+    ${PageTitle}=   Launch Browser          ${url}      ${browser}
+    Log To Console                          ${PageTitle}
+    Log                                     ${PageTitle}
 
 Verify Register Page
     [Tags]                                  register
